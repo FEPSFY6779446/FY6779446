@@ -241,27 +241,46 @@
     <pre>
       Future infrastructure will rely on embedded sensors and AI-based monitoring. Piezoelectric sensors
       can continuously measure vibration amplitudes, feeding data into predictive machine learning models.
-      These systems enable real-time adaptive damping and autonomous structural control. Figure 1: Resonance
-      Amplitude vs. Frequency (Conceptual diagram showing peak amplitude at fₑ = fₙ, with damping reducing the
-      resonance peak.) 
-      <svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
-  <!-- axes -->
-  <line x1="50" y1="150" x2="350" y2="150" stroke="black" />
-  <line x1="50" y1="150" x2="50" y2="30" stroke="black" />
-  
-  <!-- resonance curve -->
-  <path d="M50,150 C100,130 150,50 200,40 C250,50 300,130 350,150" stroke="blue" fill="transparent" stroke-width="2"/>
-  
-  <!-- peak label -->
-  <text x="190" y="30" font-size="12" fill="red">fₑ = fₙ</text>
-  
-  <!-- axes labels -->
-  <text x="360" y="155" font-size="12">Frequency</text>
-  <text x="20" y="30" font-size="12">Amplitude</text>
-</svg>
-
-      </pre> 
+      These systems enable real-time adaptive damping and autonomous structural control. 
+    </pre>
 </p>
+      <h4>Figure 1: Resonance</h4>
+<p>
+  Amplitude vs. Frequency (Conceptual diagram showing peak amplitude at fₑ = fₙ, with damping reducing the
+  resonance peak.)</p>
+<div id="resonance_chart" style="width:700px; height:500px;"></div>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+    var data = new google.visualization.DataTable();
+    data.addColumn('number', 'Frequency');
+    data.addColumn('number', 'Amplitude');
+
+    var f_values = [0.5,0.6,0.7,0.8,0.9,0.95,0.98,1.0,1.02,1.05,1.1,1.2,1.3,1.4,1.5];
+    var A_values = f_values.map(f => 1 / Math.sqrt(Math.pow(1.0*1.0 - f*f,2) + Math.pow(2*0.1*1.0*f,2)));
+
+    var rows = [];
+    for(var i=0;i<f_values.length;i++){
+      rows.push([f_values[i], A_values[i]]);
+    }
+    data.addRows(rows);
+
+    var options = {
+      title: 'Resonance: Amplitude vs. Frequency',
+      hAxis: {title: 'Frequency (f)', minValue: 0.5, maxValue: 1.5},
+      vAxis: {title: 'Amplitude (A)'},
+      legend: 'none',
+      pointSize: 5,
+      curveType: 'function'
+    };
+
+    var chart = new google.visualization.ScatterChart(document.getElementById('resonance_chart'));
+    chart.draw(data, options);
+  }
+</script>
   <h3 id="Conclusion">6. Conclusion</h3> 
   <p class="ex1"> 
     <pre>
