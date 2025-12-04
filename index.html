@@ -110,11 +110,46 @@
     <pre>
       Every structure possesses a series of natural frequencies at which it naturally oscillates. 
       Resonance occurs when an external excitation frequency matches one of these natural frequencies
-      expressed as: $f_e = f_n$
-The vibration amplitude can be estimated by:
-$$
-A = \frac{F_0 / m}{(f_n^2 - f_e^2)^2 + (2 \zeta f_n f_e)^2}
-$$
+      expressed and the vibration amplitude can be estimated by:
+      <!-- MathML representation of your formula -->
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mrow>
+    <mi>A</mi>
+    <mo>=</mo>
+    <mfrac>
+      <mrow>
+        <mi>F</mi><msub><mi>0</mi></msub>
+        <mo>/</mo>
+        <mi>m</mi>
+      </mrow>
+      <mrow>
+        <mfenced>
+          <mrow>
+            <msup><mi>f</mi><msub><mi>n</mi></msub></msup>
+            <mo>-</mo>
+            <msup><mi>f</mi><msub><mi>e</mi></msub></msup>
+          </mrow>
+        </mfenced>
+        <msup><mn>2</mn></msup>
+        <mo>+</mo>
+        <msup>
+          <mfenced>
+            <mrow>
+              <mn>2</mn>
+              <mo>&#x2062;</mo> <!-- Invisible times -->
+              <mi>&#x03B6;</mi> <!-- zeta -->
+              <mo>&#x2062;</mo>
+              <msub><mi>f</mi><mi>n</mi></msub>
+              <mo>&#x2062;</mo>
+              <msub><mi>f</mi><mi>e</mi></msub>
+            </mrow>
+          </mfenced>
+          <mn>2</mn>
+        </msup>
+      </mrow>
+    </mfrac>
+  </mrow>
+</math>
       where: 
       F₀ = applied force 
       m = mass of the system 
