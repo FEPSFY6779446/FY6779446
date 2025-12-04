@@ -76,33 +76,40 @@
 
   <p class="ex1">
     <pre>
-      Resonance—the amplification of structural vibration when a system’s natural frequency aligns with an external excitation frequency
-      —remains one of the most critical challenges in civil engineering. Historical failures, most notably the Tacoma Narrows Bridge collapse, 
-      illustrate the catastrophic potential of this phenomenon. This paper investigates the physics of structural resonance, analyses key case
-      studies, and evaluates modern mitigation strategies such as tuned mass dampers, aerodynamic design, and smart materials. Finite Element
-      Modelling (FEM) and field data from bridge and high-rise structures demonstrate that advanced damping systems can reduce resonant amplitudes
-      by up to 80–85%. The paper concludes that integrating dynamic analysis and active control strategies during the early design phase is vital 
-      to ensure resilience against wind, seismic, and human-induced vibrations.
+      Resonance—the amplification of structural vibration when a system’s natural frequency aligns with 
+      an external excitation frequency —remains one of the most critical challenges in civil engineering.
+      Historical failures, most notably the Tacoma Narrows Bridge collapse, illustrate the catastrophic 
+      potential of this phenomenon. This paper investigates the physics of structural resonance, analyses 
+      key case studies, and evaluates modern mitigation strategies such as tuned mass dampers, aerodynamic
+      design, and smart materials. Finite Element Modelling (FEM) and field data from bridge and high-rise
+      structures demonstrate that advanced damping systems can reduce resonant amplitudes by up to 80–85%.
+      The paper concludes that integrating dynamic analysis and active control strategies during the early 
+      design phase is vital to ensure resilience against wind, seismic, and human-induced vibrations.
     </pre>
 </p>
 <h3 id="Introduction"> Introduction</h3>
   <p class="ex1">
     <pre>
-      Civil structures—bridges, towers, and skyscrapers—must endure not only static loads but also dynamic forces such as wind, seismic activity, 
-      and traffic-induced vibrations. When the frequency of these forces coincides with a structure’s natural frequency, resonance occurs, amplifying 
-      oscillations to potentially unsafe levels. If uncontrolled, this amplification can lead to fatigue, cracking, or complete structural failure 
-      (Chopra, 2017). Resonance itself is not inherently destructive; the danger arises from sustained cyclic excitation. For instance, rhythmic 
-      pedestrian motion or vortex shedding caused by steady wind can synchronise with a structure’s vibrational modes, leading to large amplitude 
-      oscillations (Clough & Penzien, 2003). The 1940 Tacoma Narrows Bridge collapse remains a classic example: wind-induced torsional oscillations 
-      matched the bridge’s natural frequency, resulting in dramatic failure (Billah & Scanlan, 1991). This paper aims to (1) explain the physical 
-      mechanisms of resonance in civil structures, (2) review key historical and modern case studies, and (3) evaluate computational and material-based 
+      Civil structures—bridges, towers, and skyscrapers—must endure not only static loads but also dynamic
+      forces such as wind, seismic activity, and traffic-induced vibrations. When the frequency of these 
+      forces coincides with a structure’s natural frequency, resonance occurs, amplifying oscillations to 
+      potentially unsafe levels. If uncontrolled, this amplification can lead to fatigue, cracking, or 
+      complete structural failure (Chopra, 2017). Resonance itself is not inherently destructive; the danger
+      arises from sustained cyclic excitation. For instance, rhythmic pedestrian motion or vortex shedding 
+      caused by steady wind can synchronise with a structure’s vibrational modes, leading to large amplitude 
+      oscillations (Clough & Penzien, 2003). The 1940 Tacoma Narrows Bridge collapse remains a classic 
+      example: wind-induced torsional oscillations matched the bridge’s natural frequency, resulting in 
+      dramatic failure (Billah & Scanlan, 1991). This paper aims to (1) explain the physical mechanisms of 
+      resonance in civil structures, (2) review key historical and modern case studies, and (3) evaluate 
+      computational and material-based 
       strategies for vibration mitigation.
     </pre>
 </p>
   <h3 id="Fundamentals">2. Fundamentals of Structural Resonance</h3> 
   <p class="ex1"> 
     <pre>
-       Every structure possesses a series of natural frequencies at which it naturally oscillates. Resonance occurs when an external excitation frequency 
+       Every structure possesses a series of natural frequencies at which it naturally oscillates. 
+      Resonance occurs when an external excitation frequency 
       ($f_e$) matches one of these natural frequencies ($f_n$), expressed as:
 $$
 f_e = f_n
@@ -118,36 +125,43 @@ $$
       F₀ = applied force 
       m = mass of the system 
       ζ = damping ratio 
-      A low damping ratio (common in concrete and steel structures) leads to high amplification near resonance (Humar, 2012). Effective design therefore 
-      focuses on either increasing damping, altering natural frequencies, or reducing external excitations. 
+      A low damping ratio (common in concrete and steel structures) leads to high amplification near
+      resonance (Humar, 2012). Effective design therefore focuses on either increasing damping, 
+      altering natural frequencies, or reducing external excitations. 
     </pre>
 </p>
   <h3 id="Case-Studies">3. Case Studies</h3> 
   <h4 id="Tacoma">3.1 The Tacoma Narrows Bridge (1940)</h4> 
   <p class="ex1"> 
     <pre>
-      The Tacoma Narrows Bridge, an early suspension bridge design, failed catastrophically due to aeroelastic resonance. Its slender deck allowed strong
-      coupling between aerodynamic forces and structural motion. Wind speeds around 64 km/h triggered vortex shedding that matched the torsional natural 
-      frequency (~0.2 Hz). With insufficient damping, energy accumulated until the bridge collapsed (Billah & Scanlan, 1991). This event fundamentally transformed
-      bridge engineering, prompting the introduction of aerodynamic shaping, wind tunnel testing, and dynamic load analysis in design codes.
+      The Tacoma Narrows Bridge, an early suspension bridge design, failed catastrophically due to 
+      aeroelastic resonance. Its slender deck allowed strong coupling between aerodynamic forces and 
+      structural motion. Wind speeds around 64 km/h triggered vortex shedding that matched the torsional 
+      natural frequency (~0.2 Hz). With insufficient damping, energy accumulated until the bridge collapsed
+      (Billah & Scanlan, 1991). This event fundamentally transformed bridge engineering, prompting the 
+      introduction of aerodynamic shaping, wind tunnel testing, and dynamic load analysis in design codes.
     </pre>
 </p>
   <h4 id="Millennium">3.2 The Millennium Bridge (2000)</h4> 
   <p class="ex1"> 
     <pre>
-      The London Millennium Bridge experienced lateral swaying shortly after opening, not due to wind, but due to pedestrian synchronisation. Pedestrians 
-      subconsciously matched their walking rhythm to the bridge’s lateral movement, amplifying oscillations between 0.9–1.1 Hz—close to the bridge’s natural 
-      frequency (Dallard et al., 2001). Retrofitting included the installation of 37 viscous dampers and 52 tuned mass dampers (TMDs), reducing lateral motion 
-      by over 80%. This incident highlighted the importance of human-structure interaction in dynamic analysis.
+      The London Millennium Bridge experienced lateral swaying shortly after opening, not due to wind, 
+      but due to pedestrian synchronisation. Pedestrians subconsciously matched their walking rhythm to 
+      the bridge’s lateral movement, amplifying oscillations between 0.9–1.1 Hz—close to the bridge’s natural 
+      frequency (Dallard et al., 2001). Retrofitting included the installation of 37 viscous dampers and 52 
+      tuned mass dampers (TMDs), reducing lateral motion by over 80%. This incident highlighted the 
+      importance of human-structure interaction in dynamic analysis.
     </pre>
 </p>
      <h3 id="Computational">4. Modern Computational Analysis</h3> 
   <p class="ex1"> 
     <pre>
-      Advancements in computational tools, particularly Finite Element Modelling (FEM) and Computational Fluid Dynamics (CFD), have revolutionised structural
-      resonance prediction. FEM enables engineers to calculate natural frequencies and mode shapes, while CFD simulates fluid-structure interaction to assess 
-      aerodynamic stability (Chen & Kareem, 2018). Modern skyscrapers such as the Shanghai Tower and Burj Khalifa use integrated FEM-CFD simulations during early
-      design to minimise vortex-induced vibrations. Wind tunnel tests then validate these models, ensuring design safety and efficiency.
+      Advancements in computational tools, particularly Finite Element Modelling (FEM) and Computational Fluid
+      Dynamics (CFD), have revolutionised structural resonance prediction. FEM enables engineers to calculate
+      natural frequencies and mode shapes, while CFD simulates fluid-structure interaction to assess aerodynamic
+      stability (Chen & Kareem, 2018). Modern skyscrapers such as the Shanghai Tower and Burj Khalifa use 
+      integrated FEM-CFD simulations during early design to minimise vortex-induced vibrations. Wind tunnel tests
+      then validate these models, ensuring design safety and efficiency.
 
       Table 1: Comparison of Resonance Mitigation Systems
       
@@ -187,39 +201,52 @@ $$
 </p>
    <h4 id="Aerodynamics">5.2 Aerodynamic and Material Innovations</h4> 
   <p class="ex1"> 
-    <pre> Aerodynamic cross-sections, vented decks, and tuned bearings can mitigate wind excitation. New materials such as carbon-fibre composites, shape-memory
-      alloys, and smart concrete offer improved damping and adaptability to changing load conditions.
+    <pre> 
+      Aerodynamic cross-sections, vented decks, and tuned bearings can mitigate wind excitation. 
+      New materials such as carbon-fibre composites, shape-memory alloys, and smart concrete offer
+      improved damping and adaptability to changing load conditions.
     </pre>
 </p>
     <h4 id="Monitoring">5.3 Intelligent Monitoring Systems</h4> 
   <p class="ex1"> 
     <pre>
-      Future infrastructure will rely on embedded sensors and AI-based monitoring. Piezoelectric sensors can continuously measure vibration amplitudes, feeding data
-      into predictive machine learning models. These systems enable real-time adaptive damping and autonomous structural control. Figure 1: Resonance Amplitude vs. Frequency 
-      (Conceptual diagram showing peak amplitude at fₑ = fₙ, with damping reducing the resonance peak.) 
+      Future infrastructure will rely on embedded sensors and AI-based monitoring. Piezoelectric sensors
+      can continuously measure vibration amplitudes, feeding data into predictive machine learning models.
+      These systems enable real-time adaptive damping and autonomous structural control. Figure 1: Resonance
+      Amplitude vs. Frequency (Conceptual diagram showing peak amplitude at fₑ = fₙ, with damping reducing the
+      resonance peak.) 
       </pre> 
 </p>
   <h3 id="Conclusion">6. Conclusion</h3> 
   <p class="ex1"> 
     <pre>
-      Resonance remains a central concern in structural engineering, capable of turning elegant designs into catastrophic failures if ignored. From the Tacoma
-      Narrows collapse to the success of the Millennium Bridge retrofit, each case underscores the importance of dynamic analysis. Modern engineering solutions—combining
-      FEM-CFD simulations, advanced damping systems, and AI-based monitoring—allow designers to predict and counteract resonance long before construction begins. The future
-      of civil engineering lies not only in strong and stable structures, but in tuned systems that harmonise with their environment, ensuring safety, adaptability, and longevity. 
+      Resonance remains a central concern in structural engineering, capable of turning elegant designs into 
+      catastrophic failures if ignored. From the Tacoma Narrows collapse to the success of the Millennium Bridge 
+      retrofit, each case underscores the importance of dynamic analysis. Modern engineering solutions—combining
+      FEM-CFD simulations, advanced damping systems, and AI-based monitoring—allow designers to predict and counteract
+      resonance long before construction begins. The future of civil engineering lies not only in strong and stable
+      structures, but in tuned systems that harmonise with their environment, ensuring safety, adaptability, 
+      and longevity. 
     </pre>
 </p>
   <h3 id="References">References</h3> 
   <p class="ex1">
     <pre>
-      Billah, K. Y., & Scanlan, R. H. (1991). Resonance, Tacoma Narrows bridge failure, and undergraduate physics textbooks. American Journal of Physics, 59(2), 118–124. 
-      Chen, X., & Kareem, A. (2018). Advances in modelling of aerodynamic and aeroelastic effects in tall buildings. Engineering Structures, 171, 602–619. 
+      Billah, K. Y., & Scanlan, R. H. (1991). Resonance, Tacoma Narrows bridge failure, and undergraduate physics
+      textbooks. American Journal of Physics, 59(2), 118–124. 
+      Chen, X., & Kareem, A. (2018). Advances in modelling of aerodynamic and aeroelastic effects in tall buildings.
+      Engineering Structures, 171, 602–619. 
       Chopra, A. K. (2017). Dynamics of Structures: Theory and Applications to Earthquake Engineering. Prentice Hall. 
       Clough, R. W., & Penzien, J. (2003). Dynamics of Structures. McGraw-Hill. 
-      Dallard, P., Fitzpatrick, T., Flint, A., Low, A., Smith, R., & Willford, M. (2001). The London Millennium Footbridge. Structural Engineer, 79(22), 17–33. 
+      Dallard, P., Fitzpatrick, T., Flint, A., Low, A., Smith, R., & Willford, M. (2001). The London Millennium Footbridge.
+      Structural Engineer, 79(22), 17–33. 
       Humar, J. L. (2012). Dynamics of Structures. CRC Press. 
-      Park, J., Kim, H. J., & Lee, D. (2015). Performance evaluation of a tuned mass damper installed in a high-rise building. Journal of Sound and Vibration, 357, 1–18. 
-      Soong, T. T., & Spencer, B. F. (2002). Supplemental energy dissipation: State-of-the-art and state-of-the-practice. Engineering Structures, 24(3), 243–259. 
-      Xu, Y. L., Guo, W. H., & Li, Q. S. (2016). Field measurement and control of wind-induced vibration of Dongting Lake Bridge with magnetorheological dampers. Smart Materials and Structures, 25(5), 055001. 
+      Park, J., Kim, H. J., & Lee, D. (2015). Performance evaluation of a tuned mass damper installed in a high-rise 
+      building. Journal of Sound and Vibration, 357, 1–18. 
+      Soong, T. T., & Spencer, B. F. (2002). Supplemental energy dissipation: State-of-the-art and state-of-the-practice.
+      Engineering Structures, 24(3), 243–259. 
+      Xu, Y. L., Guo, W. H., & Li, Q. S. (2016). Field measurement and control of wind-induced vibration of Dongting Lake
+      Bridge with magnetorheological dampers. Smart Materials and Structures, 25(5), 055001. 
     </pre>
 </p>
   
