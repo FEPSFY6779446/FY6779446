@@ -7,7 +7,7 @@
   <h1><b>ENG0018 Computer Laboratory 2025/26</b></h1>
   <h2>Student URN: 6779446</h2>
   <hr>
-    <h2 style="font-family:calibri;"><b>Conference Paper: Bridge Deck Repairs</b></h2>
+    <h2 style="font-family:calibri;"><b>Conference Paper: Dynamic Resonance in Civil Structures</b></h2>
     </hr>
     
     <!style for tables>
@@ -45,45 +45,7 @@
   .mySlides {display:none;}
 </style>
   </head>
-
-
-
-<body style="background-color:#FFFFFF;margin-left:50px;">
-
-  <hr>
-  <h3 id="Abstract"> Abstract</h3>
-
-  <p class="ex1">
-    <pre>
-      Hello
-      This paper presents a novel adaptive learning strategy. The most accurate classification model from a heterogeneous 
-      classifier pool is selected at each learning epoch. Our goal is to achieve greater incremental improvement in accuracy, 
-      compared to using a single type of classification model throughout the process. The strategy is evaluated on benchmark
-      data sets. We further consider an application to texture classification problems in sonar mosaic imagery and compare it
-      with non-adaptive active learning and traditional machine learning approaches. Our results show that...We conclude that...
-    </pre>
-</p>
-<h3 id="Introduction"> Introduction</h3>
-  <p class="ex1">
-    <pre>
-      Active Learning (Angluin, 1998, Cohn et al., 1994) is a paradigm where a concept is learnt by an intelligent machine through
-      the interaction of an oracle with the machine system, over a sequence of learning epochs. A distinctive component in an active 
-      system is the querying strategy, used to sample candidate training instances from a pool and evaluate them for informativeness,
-      i.e., their potential to improve the classification model. Various strategies have been proposed including; Query by Committee
-      (Seung et al., 1992), Monte Carlo estimation (Roy and McCallum, 2011), uncertainty sampling (Lewis and Gale, 1994) and version
-      space reduction (margin sampling) (Tong and Koller, 2001). Irrespective of how the most informative pattern instances are chosen
-      at each epoch, they are presented for labelling, to a machine (database) or human oracle that has knowledge of the class labels.
-      After adding the newly labelled instances to the current training set, a revised model is subsequently induced. A goal of this 
-      process is to achieve an eficient, incremental advancement of learning at each epoch. The process is continued until some 
-      stopping criterion has been met, such as reaching a stage where information from selected instances is contrary to the model,
-      causing the classifier confidence to drop, as in Valchos (2008).
-    
-    </pre>
-</p>
-  <h3 id="Analysis and discussion"> Analysis and discussion</h3>
-
-
-  <!table of contents>
+   <!table of contents>
   <table>
 
     <tr>
@@ -103,6 +65,154 @@
       <td> <a href="#References">References</td>
     </tr>
   </table>
+
+
+
+<body style="background-color:#FFFFFF;margin-left:50px;">
+
+  <hr>
+  <h3 id="Abstract"> Abstract</h3>
+
+  <p class="ex1">
+    <pre>
+      Resonance—the amplification of structural vibration when a system’s natural frequency aligns with an external excitation frequency
+      —remains one of the most critical challenges in civil engineering. Historical failures, most notably the Tacoma Narrows Bridge collapse, 
+      illustrate the catastrophic potential of this phenomenon. This paper investigates the physics of structural resonance, analyses key case
+      studies, and evaluates modern mitigation strategies such as tuned mass dampers, aerodynamic design, and smart materials. Finite Element
+      Modelling (FEM) and field data from bridge and high-rise structures demonstrate that advanced damping systems can reduce resonant amplitudes
+      by up to 80–85%. The paper concludes that integrating dynamic analysis and active control strategies during the early design phase is vital 
+      to ensure resilience against wind, seismic, and human-induced vibrations.
+    </pre>
+</p>
+<h3 id="Introduction"> Introduction</h3>
+  <p class="ex1">
+    <pre>
+      Civil structures—bridges, towers, and skyscrapers—must endure not only static loads but also dynamic forces such as wind, seismic activity, 
+      and traffic-induced vibrations. When the frequency of these forces coincides with a structure’s natural frequency, resonance occurs, amplifying 
+      oscillations to potentially unsafe levels. If uncontrolled, this amplification can lead to fatigue, cracking, or complete structural failure 
+      (Chopra, 2017). Resonance itself is not inherently destructive; the danger arises from sustained cyclic excitation. For instance, rhythmic 
+      pedestrian motion or vortex shedding caused by steady wind can synchronise with a structure’s vibrational modes, leading to large amplitude 
+      oscillations (Clough & Penzien, 2003). The 1940 Tacoma Narrows Bridge collapse remains a classic example: wind-induced torsional oscillations 
+      matched the bridge’s natural frequency, resulting in dramatic failure (Billah & Scanlan, 1991). This paper aims to (1) explain the physical 
+      mechanisms of resonance in civil structures, (2) review key historical and modern case studies, and (3) evaluate computational and material-based 
+      strategies for vibration mitigation.
+    </pre>
+</p>
+  <h3 id="Fundamentals">2. Fundamentals of Structural Resonance</h3> 
+  <p class="ex1"> 
+    <pre>
+       Every structure possesses a series of natural frequencies at which it naturally oscillates. Resonance occurs when an external excitation frequency
+      (fₑ) matches one of these natural frequencies (fₙ), expressed as: fₑ = fₙ The vibration amplitude (A) can be estimated by: 
+      A = F₀ / m * 1 / sqrt((fₙ² − fₑ²)² + (2ζ fₙ fₑ)²) 
+      where: 
+      F₀ = applied force 
+      m = mass of the system 
+      ζ = damping ratio 
+      A low damping ratio (common in concrete and steel structures) leads to high amplification near resonance (Humar, 2012). Effective design therefore 
+      focuses on either increasing damping, altering natural frequencies, or reducing external excitations. 
+    </pre>
+</p>
+  <h3 id="Case-Studies">3. Case Studies</h3> 
+  <h4 id="Tacoma">3.1 The Tacoma Narrows Bridge (1940)</h4> 
+  <p class="ex1"> 
+    <pre>
+      The Tacoma Narrows Bridge, an early suspension bridge design, failed catastrophically due to aeroelastic resonance. Its slender deck allowed strong
+      coupling between aerodynamic forces and structural motion. Wind speeds around 64 km/h triggered vortex shedding that matched the torsional natural 
+      frequency (~0.2 Hz). With insufficient damping, energy accumulated until the bridge collapsed (Billah & Scanlan, 1991). This event fundamentally transformed
+      bridge engineering, prompting the introduction of aerodynamic shaping, wind tunnel testing, and dynamic load analysis in design codes.
+    </pre>
+</p>
+  <h4 id="Millennium">3.2 The Millennium Bridge (2000)</h4> 
+  <p class="ex1"> 
+    <pre>
+      The London Millennium Bridge experienced lateral swaying shortly after opening, not due to wind, but due to pedestrian synchronisation. Pedestrians 
+      subconsciously matched their walking rhythm to the bridge’s lateral movement, amplifying oscillations between 0.9–1.1 Hz—close to the bridge’s natural 
+      frequency (Dallard et al., 2001). Retrofitting included the installation of 37 viscous dampers and 52 tuned mass dampers (TMDs), reducing lateral motion 
+      by over 80%. This incident highlighted the importance of human-structure interaction in dynamic analysis.
+    </pre>
+</p>
+     <h3 id="Computational">4. Modern Computational Analysis</h3> 
+  <p class="ex1"> 
+    <pre>
+      Advancements in computational tools, particularly Finite Element Modelling (FEM) and Computational Fluid Dynamics (CFD), have revolutionised structural
+      resonance prediction. FEM enables engineers to calculate natural frequencies and mode shapes, while CFD simulates fluid-structure interaction to assess 
+      aerodynamic stability (Chen & Kareem, 2018). Modern skyscrapers such as the Shanghai Tower and Burj Khalifa use integrated FEM-CFD simulations during early
+      design to minimise vortex-induced vibrations. Wind tunnel tests then validate these models, ensuring design safety and efficiency.
+
+      Table 1: Comparison of Resonance Mitigation Systems
+      
+      <table>
+  <tr>
+    <th>Type</th>
+    <th>Description</th>
+    <th>Energy Source</th>
+    <th>Example</th>
+    <th>Reduction Efficiency</th>
+  </tr>
+  <tr>
+    <td>Passive</td>
+    <td>Tuned Mass Dampers, viscoelastic materials</td>
+    <td>None (reactive)</td>
+    <td>Taipei 101 TMD</td>
+    <td>40–60%</td>
+  </tr>
+  <tr>
+    <td>Active</td>
+    <td>Sensors + actuators generate counter-forces</td>
+    <td>External energy</td>
+    <td>Seismic control systems</td>
+    <td>70–90%</td>
+  </tr>
+  <tr>
+    <td>Semi-Active</td>
+    <td>MR dampers adjust stiffness</td>
+    <td>Minimal energy</td>
+    <td>Dongting Lake Bridge</td>
+    <td>60–80%</td>
+  </tr>
+</table>
+<p><em>Table 1 adapted from Park et al. (2015); Xu et al. (2016).</em></p>
+
+      </pre>
+</p>
+   <h4 id="Aerodynamics">5.2 Aerodynamic and Material Innovations</h4> 
+  <p class="ex1"> 
+    <pre> Aerodynamic cross-sections, vented decks, and tuned bearings can mitigate wind excitation. New materials such as carbon-fibre composites, shape-memory
+      alloys, and smart concrete offer improved damping and adaptability to changing load conditions.
+    </pre>
+</p>
+    <h4 id="Monitoring">5.3 Intelligent Monitoring Systems</h4> 
+  <p class="ex1"> 
+    <pre>
+      Future infrastructure will rely on embedded sensors and AI-based monitoring. Piezoelectric sensors can continuously measure vibration amplitudes, feeding data
+      into predictive machine learning models. These systems enable real-time adaptive damping and autonomous structural control. Figure 1: Resonance Amplitude vs. Frequency 
+      (Conceptual diagram showing peak amplitude at fₑ = fₙ, with damping reducing the resonance peak.) 
+      </pre> 
+</p>
+  <h3 id="Conclusion">6. Conclusion</h3> 
+  <p class="ex1"> 
+    <pre>
+      Resonance remains a central concern in structural engineering, capable of turning elegant designs into catastrophic failures if ignored. From the Tacoma
+      Narrows collapse to the success of the Millennium Bridge retrofit, each case underscores the importance of dynamic analysis. Modern engineering solutions—combining
+      FEM-CFD simulations, advanced damping systems, and AI-based monitoring—allow designers to predict and counteract resonance long before construction begins. The future
+      of civil engineering lies not only in strong and stable structures, but in tuned systems that harmonise with their environment, ensuring safety, adaptability, and longevity. 
+    </pre>
+</p>
+  <h3 id="References">References</h3> 
+  <p class="ex1">
+    <pre>
+      Billah, K. Y., & Scanlan, R. H. (1991). Resonance, Tacoma Narrows bridge failure, and undergraduate physics textbooks. American Journal of Physics, 59(2), 118–124. 
+      Chen, X., & Kareem, A. (2018). Advances in modelling of aerodynamic and aeroelastic effects in tall buildings. Engineering Structures, 171, 602–619. 
+      Chopra, A. K. (2017). Dynamics of Structures: Theory and Applications to Earthquake Engineering. Prentice Hall. 
+      Clough, R. W., & Penzien, J. (2003). Dynamics of Structures. McGraw-Hill. 
+      Dallard, P., Fitzpatrick, T., Flint, A., Low, A., Smith, R., & Willford, M. (2001). The London Millennium Footbridge. Structural Engineer, 79(22), 17–33. 
+      Humar, J. L. (2012). Dynamics of Structures. CRC Press. 
+      Park, J., Kim, H. J., & Lee, D. (2015). Performance evaluation of a tuned mass damper installed in a high-rise building. Journal of Sound and Vibration, 357, 1–18. 
+      Soong, T. T., & Spencer, B. F. (2002). Supplemental energy dissipation: State-of-the-art and state-of-the-practice. Engineering Structures, 24(3), 243–259. 
+      Xu, Y. L., Guo, W. H., & Li, Q. S. (2016). Field measurement and control of wind-induced vibration of Dongting Lake Bridge with magnetorheological dampers. Smart Materials and Structures, 25(5), 055001. 
+    </pre>
+</p>
+  
   
 <!-- //////////////////////////////////////////////////////////////////////////////// -->
   <!-- ////////////////////////////// Adding last update ////////////////////////////// -->
