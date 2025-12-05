@@ -72,6 +72,47 @@
     </tr>
   </table>
 
+   <!-- //////////////////////////////////////////////////////////////////////////////// -->
+  <!-- ////////////////////////////// Word count function ////////////////////////////// -->
+  <!-- //////////////////////////////////////////////////////////////////////////////// -->
+<!-- Placeholder for total word count -->
+<p id="totalWordCount"></p>
+<hr>
+<script>
+  // Function to calculate and display word count for a specified section
+  function displayWordCount(sectionId, outputId) {
+    // Get the text content from the specified section
+    const text = document.getElementById(sectionId).textContent;
+    // Split text into words based on spaces and filter out any empty strings
+    const wordArray = text.trim().split(/\s+/);
+    // Count the words
+    const wordCount = wordArray.length;
+    // Return the word count for summing purposes
+    return wordCount;
+  }
+  // Function to calculate and display total word count from selected sections
+  function displayTotalWordCount() {
+    // Calculate word count for each section and accumulate the total
+    const AbstractCount = displayWordCount("Abstract");
+    const IntroductionCount = displayWordCount("Introduction");
+    const FundamentalsCount = displayWordCount ("Fundamentals");
+    const CasestudiesCount = displayWordCount ("Case-Studies");
+    const TacomaCount = displayWordCount ("Tacoma");
+    const MillenniumCount = displayWordCount ("Millennium");
+    const ComputationalCount= displayWordCount ("Computational");
+    const AerodynamicsCount = displayWordCount ("Aerodynamics");
+    const MonitoringCount = displayWordCount ("Monitoring");
+    const ConclusionCount = displayWordCount ("Conclusion");
+    // Calculate the sum of all selected sections
+    const totalWordCount = AbstractCount + IntroductionCount + FundamentalCount + CasestudiesCount + TacomaCount + MillenniumCount + ComputationalCount + AerodynamicsCount + MonitoringCount + ConclusionCount;
+    // Display the total word count
+    document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
+  }
+  // Run the function for specific sections and display total count when the page loads
+  window.onload = displayTotalWordCount;
+</script>
+</body>
+</html>
 
 
 <body style="background-color:#FFFFFF;margin-left:50px;">
@@ -106,8 +147,7 @@
       example: wind-induced torsional oscillations matched the bridge’s natural frequency, resulting in 
       dramatic failure (Billah & Scanlan, 1991). This paper aims to (1) explain the physical mechanisms of 
       resonance in civil structures, (2) review key historical and modern case studies, and (3) evaluate 
-      computational and material-based 
-      strategies for vibration mitigation.
+      computational and material-based strategies for vibration mitigation.
     </pre>
 </p>
   <h3 id="Fundamentals"> Fundamentals of Structural Resonance</h3> 
@@ -370,44 +410,4 @@
 </script>
 
 
- <!-- //////////////////////////////////////////////////////////////////////////////// -->
-  <!-- ////////////////////////////// Word count function ////////////////////////////// -->
-  <!-- //////////////////////////////////////////////////////////////////////////////// -->
-<!-- Placeholder for total word count -->
-<p id="totalWordCount"></p>
-<hr>
-<script>
-  // Function to calculate and display word count for a specified section
-  function displayWordCount(sectionId, outputId) {
-    // Get the text content from the specified section
-    const text = document.getElementById(sectionId).textContent;
-    // Split text into words based on spaces and filter out any empty strings
-    const wordArray = text.trim().split(/\s+/);
-    // Count the words
-    const wordCount = wordArray.length;
-    // Return the word count for summing purposes
-    return wordCount;
-  }
-  // Function to calculate and display total word count from selected sections
-  function displayTotalWordCount() {
-    // Calculate word count for each section and accumulate the total
-    const AbstractCount = displayWordCount("Abstract");
-    const IntroductionCount = displayWordCount("Introduction");
-    const FundamentalsCount = displayWordCount ("Fundamentals");
-    const CasestudiesCount = displayWordCount ("Case-Studies");
-    const TacomaCount = displayWordCount ("Tacoma");
-    const MillenniumCount = displayWordCount ("Millennium");
-    const ComputationalCount= displayWordCount ("Computational");
-    const AerodynamicsCount = displayWordCount ("Aerodynamics");
-    const MonitoringCount = displayWordCount ("Monitoring");
-    const ConclusionCount = displayWordCount ("Conclusion");
-    // Calculate the sum of all selected sections
-    const totalWordCount = AbstractCount + IntroductionCount + FundamentalCount + CasestudiesCount + TacomaCount + MillenniumCount + ComputationalCount + AerodynamicsCount + MonitoringCount + ConclusionCount;
-    // Display the total word count
-    document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
-  }
-  // Run the function for specific sections and display total count when the page loads
-  window.onload = displayTotalWordCount;
-</script>
-</body>
-</html>
+
