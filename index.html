@@ -59,9 +59,14 @@
       <td> <a href= "#Introduction">Introduction</td>
     </tr>
     <tr>
-      <td> <a href="#Analysis and discussion">Analysis and discussion</td>
+      <td> <a href="#Fundamentals">Fundamentals of Structural Resonance</td>
     </tr>
-
+    <tr>
+      <td> <a href= "#Case-Studies"> Case Studies</td>
+    </tr>
+    <tr>
+      <td> <a href="#Conclusion"> Conclusion</td>
+    </tr>
     <tr>
       <td> <a href="#References">References</td>
     </tr>
@@ -105,7 +110,7 @@
       strategies for vibration mitigation.
     </pre>
 </p>
-  <h3 id="Fundamentals">2. Fundamentals of Structural Resonance</h3> 
+  <h3 id="Fundamentals"> Fundamentals of Structural Resonance</h3> 
   <p class="ex1"> 
     <pre>
       Every structure possesses a series of natural frequencies at which it naturally oscillates. 
@@ -159,8 +164,8 @@
       altering natural frequencies, or reducing external excitations. 
     </pre>
 </p>
-  <h3 id="Case-Studies">3. Case Studies</h3> 
-  <h4 id="Tacoma">3.1 The Tacoma Narrows Bridge (1940)</h4> 
+  <h3 id="Case-Studies"> Case Studies</h3> 
+  <h4 id="Tacoma">1. The Tacoma Narrows Bridge (1940)</h4> 
   <p class="ex1"> 
     <pre>
       The Tacoma Narrows Bridge, an early suspension bridge design, failed catastrophically due to 
@@ -171,7 +176,7 @@
       introduction of aerodynamic shaping, wind tunnel testing, and dynamic load analysis in design codes.
     </pre>
 </p>
-  <h4 id="Millennium">3.2 The Millennium Bridge (2000)</h4> 
+  <h4 id="Millennium">2. The Millennium Bridge (2000)</h4> 
   <p class="ex1"> 
     <pre>
       The London Millennium Bridge experienced lateral swaying shortly after opening, not due to wind, 
@@ -182,7 +187,7 @@
       importance of human-structure interaction in dynamic analysis.
     </pre>
 </p>
-     <h3 id="Computational">4. Modern Computational Analysis</h3> 
+     <h3 id="Computational">3.Modern Computational Analysis</h3> 
   <p class="ex1"> 
     <pre>
       Advancements in computational tools, particularly Finite Element Modelling (FEM) and Computational Fluid
@@ -228,7 +233,7 @@
 
       </pre>
 </p>
-   <h4 id="Aerodynamics">5.2 Aerodynamic and Material Innovations</h4> 
+   <h4 id="Aerodynamics">Aerodynamic and Material Innovations</h4> 
   <p class="ex1"> 
     <pre> 
       Aerodynamic cross-sections, vented decks, and tuned bearings can mitigate wind excitation. 
@@ -236,7 +241,7 @@
       improved damping and adaptability to changing load conditions.
     </pre>
 </p>
-    <h4 id="Monitoring">5.3 Intelligent Monitoring Systems</h4> 
+    <h4 id="Monitoring">Intelligent Monitoring Systems</h4> 
   <p class="ex1"> 
     <pre>
       Future infrastructure will rely on embedded sensors and AI-based monitoring. Piezoelectric sensors
@@ -386,10 +391,18 @@
   // Function to calculate and display total word count from selected sections
   function displayTotalWordCount() {
     // Calculate word count for each section and accumulate the total
-    const IntroductionCount = displayWordCount("Introduction_InText");
-    const AnalysisCount = displayWordCount("Analysis_InText");
+    const AbstractCount = displayWordCount("Abstract");
+    const IntroductionCount = displayWordCount("Introduction");
+    const FundamentalsCount = displayWordCount ("Fundamentals");
+    const CasestudiesCount = displayWordCount ("Case-Studies");
+    const TacomaCount = displayWordCount ("Tacoma");
+    const MillenniumCount = displayWordCount ("Millennium");
+    const ComputationalCount= displayWordCount ("Computational");
+    const AerodynamicsCount = displayWordCount ("Aerodynamics");
+    const MonitoringCount = displayWordCount ("Monitoring");
+    const ConclusionCount = displayWordCount ("Conclusion");
     // Calculate the sum of all selected sections
-    const totalWordCount = IntroductionCount + AnalysisCount;
+    const totalWordCount = AbstractCount + IntroductionCount + FundamentalCount + CasestudiesCount + TacomaCount + MillenniumCount + ComputationalCount + AerodynamicsCount + MonitoringCount + ConclusionCount;
     // Display the total word count
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
