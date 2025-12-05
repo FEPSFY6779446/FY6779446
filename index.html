@@ -183,6 +183,16 @@
       integrated FEM-CFD simulations during early design to minimise vortex-induced vibrations. Wind tunnel tests
       then validate these models, ensuring design safety and efficiency.
 
+      The table below highlights how different resonance-mitigation systems balance complexity, power requirements,
+      and performance. Passive systems rely on inherent mechanical responses, offering moderate reductions without 
+      external energy, making them reliable but limited. Active systems deliver the highest efficiency by using 
+      sensors and actuators to counteract vibrations in real time, though this requires continuous power and more
+      sophisticated control. Semi-active systems bridge the two approaches, adjusting their properties with minimal
+      energy to achieve strong, adaptable damping. Overall, the progression from passive to active reflects increasing
+      efficiency and responsiveness, with semi-active designs providing a practical compromise between energy demand 
+      and mitigation performance.
+    
+
       Table 1: Comparison of Resonance Mitigation Systems
       
       <table>
@@ -217,16 +227,6 @@
 </table>
 <p><em>Table 1 adapted from Park et al. (2015); Xu et al. (2016).</em></p>
 </p>
-  <p class="ex1" id="Tableanalysis_InText">
-    The table highlights how different resonance-mitigation systems balance complexity, power requirements, 
-    and performance. Passive systems rely on inherent mechanical responses, offering moderate reductions without 
-    external energy, making them reliable but limited. Active systems deliver the highest efficiency by using sensors 
-    and actuators to counteract vibrations in real time, though this requires continuous power and more sophisticated
-    control. Semi-active systems bridge the two approaches, adjusting their properties with minimal energy to achieve 
-    strong, adaptable damping. Overall, the progression from passive to active reflects increasing efficiency and 
-    responsiveness, with semi-active designs providing a practical compromise between energy demand and mitigation 
-    performance.
-  </p>
    <h4 id="Aerodynamics">Aerodynamic and Material Innovations</h4> 
   <p class="ex1" id= "Aerodynamics_InText"> 
       Aerodynamic cross-sections, vented decks, and tuned bearings can mitigate wind excitation. 
@@ -389,12 +389,11 @@
     const TacomaCount = displayWordCount ("Tacoma_InText");
     const MillenniumCount = displayWordCount ("Millennium_InText");
     const ComputationalCount= displayWordCount ("Computational_InText");
-    const TableanalysisCount= displayWordCount ("Tableanalysis_InText");
     const AerodynamicsCount = displayWordCount ("Aerodynamics_InText");
     const MonitoringCount = displayWordCount ("Monitoring_InText");
     const ConclusionCount = displayWordCount ("Conclusion_InText");
     // Calculate the sum of all selected sections
-    const totalWordCount = AbstractCount + IntroductionCount + FundamentalsCount + TacomaCount + MillenniumCount + ComputationalCount + TableanalysisCount + AerodynamicsCount + MonitoringCount + ConclusionCount;
+    const totalWordCount = AbstractCount + IntroductionCount + FundamentalsCount + TacomaCount + MillenniumCount + ComputationalCount + AerodynamicsCount + MonitoringCount + ConclusionCount;
     // Display the total word count
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
