@@ -77,7 +77,7 @@
   <hr>
   <h3 id="Abstract"> Abstract</h3>
 
-  <p class="ex1">
+  <p class="ex1" id="Abstract_InText">
     <pre id="Abstract_InText">
       Resonance—the amplification of structural vibration when a system’s natural frequency aligns with 
       an external excitation frequency —remains one of the most critical challenges in civil engineering.
@@ -91,7 +91,7 @@
     </pre>
 </p>
 <h3 id="Introduction"> Introduction</h3>
-  <p class="ex1">
+  <p class="ex1"id="Introduction_InText">
     <pre id="Introduction_InText">
       Civil structures—bridges, towers, and skyscrapers—must endure not only static loads but also dynamic
       forces such as wind, seismic activity, and traffic-induced vibrations. When the frequency of these 
@@ -108,7 +108,7 @@
     </pre>
 </p>
   <h3 id="Fundamentals"> Fundamentals of Structural Resonance</h3> 
-  <p class="ex1"> 
+  <p class="ex1" id="Fundamentals_InText"> 
     <pre id="Fundamentals_InText">
       Every structure possesses a series of natural frequencies at which it naturally oscillates. 
       Resonance occurs when an external excitation frequency matches one of these natural frequencies
@@ -163,7 +163,7 @@
 </p>
   <h3 id="Case-Studies"> Case Studies</h3> 
   <h4 id="Tacoma">1. The Tacoma Narrows Bridge (1940)</h4> 
-  <p class="ex1"> 
+  <p class="ex1" id="Tacoma_InText"> 
     <pre id="Tacoma_InText">
       The Tacoma Narrows Bridge, an early suspension bridge design, failed catastrophically due to 
       aeroelastic resonance. Its slender deck allowed strong coupling between aerodynamic forces and 
@@ -174,7 +174,7 @@
     </pre>
 </p>
   <h4 id="Millennium">2. The Millennium Bridge (2000)</h4> 
-  <p class="ex1"> 
+  <p class="ex1" id="Millennium_InText"> 
     <pre id="Millennium_InText">
       The London Millennium Bridge experienced lateral swaying shortly after opening, not due to wind, 
       but due to pedestrian synchronisation. Pedestrians subconsciously matched their walking rhythm to 
@@ -185,7 +185,7 @@
     </pre>
 </p>
      <h3 id="Computational">3.Modern Computational Analysis</h3> 
-  <p class="ex1"> 
+  <p class="ex1" id= "Computational_InText"> 
     <pre id= "Computational_InText">
       Advancements in computational tools, particularly Finite Element Modelling (FEM) and Computational Fluid
       Dynamics (CFD), have revolutionised structural resonance prediction. FEM enables engineers to calculate
@@ -231,7 +231,7 @@
       </pre>
 </p>
    <h4 id="Aerodynamics">Aerodynamic and Material Innovations</h4> 
-  <p class="ex1"> 
+  <p class="ex1" id= "Aerodynamics_InText"> 
     <pre id= "Aerodynamics_InText"> 
       Aerodynamic cross-sections, vented decks, and tuned bearings can mitigate wind excitation. 
       New materials such as carbon-fibre composites, shape-memory alloys, and smart concrete offer
@@ -239,7 +239,7 @@
     </pre>
 </p>
     <h4 id="Monitoring">Intelligent Monitoring Systems</h4> 
-  <p class="ex1"> 
+  <p class="ex1" id="Monitoring_InText"> 
     <pre id="Monitoring_InText">
       Future infrastructure will rely on embedded sensors and AI-based monitoring. Piezoelectric sensors
       can continuously measure vibration amplitudes, feeding data into predictive machine learning models.
@@ -284,7 +284,7 @@
   }
 </script>
   <h3 id="Conclusion">6. Conclusion</h3> 
-  <p class="ex1"> 
+  <p class="ex1" id="Conclusion_InText"> 
     <pre id="Conclusion_InText">
       Resonance remains a central concern in structural engineering, capable of turning elegant designs into 
       catastrophic failures if ignored. From the Tacoma Narrows collapse to the success of the Millennium Bridge 
@@ -389,7 +389,6 @@
     const AbstractCount = displayWordCount("Abstract_InText");
     const IntroductionCount = displayWordCount("Introduction_InText");
     const FundamentalsCount = displayWordCount ("Fundamentals_InText");
-    const CasestudiesCount = displayWordCount ("Case-Studies_InText");
     const TacomaCount = displayWordCount ("Tacoma_InText");
     const MillenniumCount = displayWordCount ("Millennium_InText");
     const ComputationalCount= displayWordCount ("Computational_InText");
@@ -397,7 +396,7 @@
     const MonitoringCount = displayWordCount ("Monitoring_InText");
     const ConclusionCount = displayWordCount ("Conclusion_InText");
     // Calculate the sum of all selected sections
-    const totalWordCount = AbstractCount + IntroductionCount + FundamentalCount + CasestudiesCount + TacomaCount + MillenniumCount + ComputationalCount + AerodynamicsCount + MonitoringCount + ConclusionCount;
+    const totalWordCount = AbstractCount + IntroductionCount + FundamentalsCount + TacomaCount + MillenniumCount + ComputationalCount + AerodynamicsCount + MonitoringCount + ConclusionCount;
     // Display the total word count
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
