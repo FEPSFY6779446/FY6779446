@@ -217,6 +217,16 @@
 </table>
 <p><em>Table 1 adapted from Park et al. (2015); Xu et al. (2016).</em></p>
 </p>
+  <p class="ex1" id="Tableanalysis_InText">
+    The table highlights how different resonance-mitigation systems balance complexity, power requirements, 
+    and performance. Passive systems rely on inherent mechanical responses, offering moderate reductions without 
+    external energy, making them reliable but limited. Active systems deliver the highest efficiency by using sensors 
+    and actuators to counteract vibrations in real time, though this requires continuous power and more sophisticated
+    control. Semi-active systems bridge the two approaches, adjusting their properties with minimal energy to achieve 
+    strong, adaptable damping. Overall, the progression from passive to active reflects increasing efficiency and 
+    responsiveness, with semi-active designs providing a practical compromise between energy demand and mitigation 
+    performance.
+  </p>
    <h4 id="Aerodynamics">Aerodynamic and Material Innovations</h4> 
   <p class="ex1" id= "Aerodynamics_InText"> 
       Aerodynamic cross-sections, vented decks, and tuned bearings can mitigate wind excitation. 
@@ -280,17 +290,25 @@
   <p class="ex1">
       Billah, K. Y., & Scanlan, R. H. (1991). Resonance, Tacoma Narrows bridge failure, and undergraduate physics
       textbooks. American Journal of Physics, 59(2), 118–124. 
+    
       Chen, X., & Kareem, A. (2018). Advances in modelling of aerodynamic and aeroelastic effects in tall buildings.
       Engineering Structures, 171, 602–619. 
+    
       Chopra, A. K. (2017). Dynamics of Structures: Theory and Applications to Earthquake Engineering. Prentice Hall. 
+    
       Clough, R. W., & Penzien, J. (2003). Dynamics of Structures. McGraw-Hill. 
+    
       Dallard, P., Fitzpatrick, T., Flint, A., Low, A., Smith, R., & Willford, M. (2001). The London Millennium Footbridge.
       Structural Engineer, 79(22), 17–33. 
+    
       Humar, J. L. (2012). Dynamics of Structures. CRC Press. 
+    
       Park, J., Kim, H. J., & Lee, D. (2015). Performance evaluation of a tuned mass damper installed in a high-rise 
       building. Journal of Sound and Vibration, 357, 1–18. 
+    
       Soong, T. T., & Spencer, B. F. (2002). Supplemental energy dissipation: State-of-the-art and state-of-the-practice.
       Engineering Structures, 24(3), 243–259. 
+    
       Xu, Y. L., Guo, W. H., & Li, Q. S. (2016). Field measurement and control of wind-induced vibration of Dongting Lake
       Bridge with magnetorheological dampers. Smart Materials and Structures, 25(5), 055001. 
 </p>
@@ -371,11 +389,12 @@
     const TacomaCount = displayWordCount ("Tacoma_InText");
     const MillenniumCount = displayWordCount ("Millennium_InText");
     const ComputationalCount= displayWordCount ("Computational_InText");
+    const TableanalysisCount= displayWordCount ("Tableanalysis_InText");
     const AerodynamicsCount = displayWordCount ("Aerodynamics_InText");
     const MonitoringCount = displayWordCount ("Monitoring_InText");
     const ConclusionCount = displayWordCount ("Conclusion_InText");
     // Calculate the sum of all selected sections
-    const totalWordCount = AbstractCount + IntroductionCount + FundamentalsCount + TacomaCount + MillenniumCount + ComputationalCount + AerodynamicsCount + MonitoringCount + ConclusionCount;
+    const totalWordCount = AbstractCount + IntroductionCount + FundamentalsCount + TacomaCount + MillenniumCount + ComputationalCount + TableanalysisCount + AerodynamicsCount + MonitoringCount + ConclusionCount;
     // Display the total word count
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
